@@ -1,167 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Lab Assignment 01 – Semantic HTML Foundations</title>
-
-  <style>
-    /* Minimal styling allowed in Lab 01 (color + font only) */
-
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 16px;
-      background-color: #f4f6f9;
-      color: #1f2933;
-    }
-
-    header {
-      background-color: #1e3a8a;
-      color: white;
-    }
-
-    h1, h2, h3 {
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    nav {
-      background-color: #e0e7ff;
-    }
-
-    .rule-box {
-      background-color: #fff4e6;
-    }
-
-    .note-box {
-      background-color: #e6f4ff;
-    }
-
-    .warning {
-      color: #b91c1c;
-      font-size: 15px;
-    }
-
-    footer {
-      background-color: #1e3a8a;
-      color: white;
-      font-size: 14px;
-    }
-
-    a {
-      color: #1e3a8a;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Semantic HTML Comparison - Lab 01</title>
+    <style>
+        /* Minimal styling per lab rules */
+        body { font-family: "Segoe UI", sans-serif; background-color: #f4f6f9; color: #1f2933; }
+        header { background-color: #1e3a8a; color: white; }
+        .correct-box { background-color: #e6fffa; }
+        .wrong-box { background-color: #fff5f5; }
+        .warning { color: #b91c1c; font-weight: bold; }
+        h2 { border-bottom: 1px solid #1e3a8a; }
+    </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Lab Practice &amp; Assignment 01</h1>
-    <p>
-      Semantic HTML foundations using Norman, GOMS, and KLM
-      (<strong>Dix et al., Human–Computer Interaction</strong>, Ch. 12, p. 437: KLM/GOMS operators; plus Ch. 9: evaluation techniques)
-    </p>
-  </header>
+<header>
+    <h1>HTML Best Practices: Wrong vs. Correct</h1>
+</header>
 
-  <nav aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="analysis.html">Interaction Analysis</a></li>
-      <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
-      <li><a href="assignment01.html" aria-current="page">Lab 01 Rules</a></li>
-    </ul>
-  </nav>
+<main>
+    <section>
+        <h2>1. Navigation Menu</h2>
+        
+        <div class="wrong-box">
+            <p class="warning">WRONG (Non-semantic):</p>
+            <div id="nav">
+                <span onclick="location.href='index.html'">Home</span> | 
+                <span onclick="location.href='cv.html'">CV</span>
+            </div>
+        </div>
 
-  <main>
-
-    <section class="note-box">
-      <h2>Official Starter Code &amp; Live Demo</h2>
-      <p>
-        <strong>Starter Code (GitHub Repository):</strong><br>
-        <a href="https://github.com/anas-ahmed9642/hci-cg-2026">
-          https://github.com/anas-ahmed9642/hci-cg-2026
-        </a>
-      </p>
-      <p>
-        <strong>Live Demo (GitHub Pages):</strong><br>
-        <a href="https://anas-ahmed9642.github.io/hci-cg-2026/">
-         https://anas-ahmed9642.github.io/hci-cg-2026/
-        </a>
-      </p>
-      <p>
-        <em>This page is the single source of truth for Lab &amp; Assignment 01.</em>
-      </p>
+        <div class="correct-box">
+            <p><strong>CORRECT (Semantic):</strong></p>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </nav>
+        </div>
     </section>
 
     <section>
-      <h2>Purpose</h2>
-      <p>
-        The purpose of Lab &amp; Assignment 01 is to bring all students to the same baseline level of
-        <strong>semantic HTML</strong> skill with <strong>minimal CSS</strong> and <strong>no JavaScript</strong>.
-        Your work should clearly communicate the differences between Norman’s model, GOMS, and KLM.
-      </p>
-    </section>
+        <h2>2. Form Controls (Accessibility)</h2>
+        
+        <div class="wrong-box">
+            <p class="warning">WRONG:</p>
+            User Name: <input type="text" name="user">
+        </div>
 
-    <section class="rule-box">
-      <h2>Starter Project</h2>
-      <p>
-        You will receive a starter website repository (5 pages). Your task is to improve the HTML
-        structure, clarity, and accessibility while keeping within the rules below.
-      </p>
-      <ul>
-        <li><code>index.html</code></li>
-        <li><code>cv.html</code></li>
-        <li><code>contact.html</code></li>
-        <li><code>analysis.html</code></li>
-        <li><code>norman2klm.html</code></li>
-      </ul>
+        <div class="correct-box">
+            <p><strong>CORRECT:</strong></p>
+            <form>
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username">
+            </form>
+        </div>
     </section>
 
     <section>
-      <h2>Accessibility Requirements</h2>
-      <ul>
-        <li>Use <code>aria-current="page"</code> on the active navigation link</li>
-        <li>All form controls must have associated <code>&lt;label&gt;</code></li>
-        <li>Images must have appropriate <code>alt</code> text</li>
-        <li>The site must be keyboard usable</li>
-      </ul>
-    </section>
+        <h2>3. Document Structure (Norman/GOMS Analysis)</h2>
+        
+        <div class="wrong-box">
+            <p class="warning">WRONG:</p>
+            <p><b>GOMS Analysis</b></p>
+            <p>GOMS stands for Goals, Operators, Methods, and Selection rules...</p>
+        </div>
 
-    <section class="rule-box">
-      <h2>CSS Rules (Strict: Minimal Only)</h2>
-
-      <p class="warning">You may use CSS only for:</p>
-      <ul>
-        <li><code>color</code></li>
-        <li><code>background-color</code></li>
-        <li><code>font-family</code></li>
-        <li><code>font-size</code></li>
-      </ul>
-
-      <p class="warning">Not allowed:</p>
-      <ul>
-        <li>No margin, padding, border, flex, grid, etc.</li>
-        <li>No animations or transitions</li>
-        <li>No frameworks</li>
-        <li><strong>No JavaScript</strong></li>
-      </ul>
+        <div class="correct-box">
+            <p><strong>CORRECT:</strong></p>
+            <article>
+                <h3>GOMS Analysis</h3>
+                <p>GOMS stands for <strong>Goals, Operators, Methods,</strong> and <strong>Selection rules</strong>...</p>
+            </article>
+        </div>
     </section>
 
     <section>
-      <h2>Submission</h2>
-      <ul>
-        <li>Submit GitHub repository link</li>
-        <li>Must render correctly via GitHub Pages</li>
-        <li>Due: Week 05</li>
-      </ul>
+        <h2>4. Images</h2>
+        
+        <div class="wrong-box">
+            <p class="warning">WRONG:</p>
+            <img src="klm-model.png" width="100">
+        </div>
+
+        <div class="correct-box">
+            <p><strong>CORRECT:</strong></p>
+            <figure>
+                <img src="klm-model.png" alt="Diagram showing KLM operators like Keystroke and Pointing" width="100">
+                <figcaption>Figure 1: The KLM Interaction Model</figcaption>
+            </figure>
+        </div>
     </section>
+</main>
 
-  </main>
-
-  <footer>
-    <p><a href="index.html">Back to Home</a></p>
-  </footer>
+<footer>
+    <p><a href="assignment01.html">Return to Lab Rules</a></p>
+</footer>
 
 </body>
 </html>
