@@ -101,6 +101,10 @@
 
     <section class="rule-box">
       <h3>1. Document Structure (Norman's Evaluation)</h3>
+      <p>
+        Proper structure allows users and screen readers to perceive the information hierarchy accurately.
+        <cite>(Ref: Dix et al., Ch. 10 "Universal Design", p. 374)</cite>
+      </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Using visual styling to fake a heading.</p>
         <p style="font-size: 20px;"><b>KLM Model Analysis</b></p>
@@ -113,7 +117,9 @@
 
     <section>
       <h3>2. Form Controls (KLM Mental Preparation)</h3>
-      <p>Using labels reduces the <strong>M (Mental)</strong> operator time for the user.</p>
+      <p>Using labels reduces the <strong>M (Mental)</strong> operator time for the user by clearly defining input targets.
+         <cite>(Ref: Dix et al., Ch. 12 "Cognitive Models", p. 428)</cite>
+      </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Placeholder only / No label.</p>
         Email: <input type="text" name="email">
@@ -127,6 +133,10 @@
 
     <section class="rule-box">
       <h3>3. Site Navigation</h3>
+      <p>
+        Semantic navigation blocks help users conceptualize the site structure, aiding in wayfinding.
+        <cite>(Ref: Dix et al., Ch. 7 "Design Rules", p. 275)</cite>
+      </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Using generic containers.</p>
         <div id="links">
@@ -147,6 +157,10 @@
 
     <section>
       <h3>4. Accessibility (Norman's Perception)</h3>
+      <p>
+        Missing alternative text breaks the perception phase for visually impaired users.
+        <cite>(Ref: Dix et al., Ch. 10 "Universal Design", p. 376)</cite>
+      </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Missing Alternative Text.</p>
         <img src="goms-diagram.png" width="100">
@@ -154,6 +168,105 @@
       <div>
         <p><strong>CORRECT:</strong> Descriptive alt text for screen readers.</p>
         <img src="goms-diagram.png" alt="A flow chart showing GOMS selection rules for navigation" width="100">
+      </div>
+    </section>
+
+    <section class="rule-box">
+      <h3>5. Clickable Elements (Affordances)</h3>
+      <p>
+        Using proper interactive elements provides clear affordances, reducing cognitive load. 
+        <cite>(Ref: Dix et al., Ch. 3 "The Interaction", p. 126-128)</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> Using a div with an onClick event.</p>
+        <div onclick="submit()">Submit</div>
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using the semantic button element.</p>
+        <button type="submit">Submit</button>
+      </div>
+    </section>
+
+    <section>
+      <h3>6. Emphasis and Importance (Semantic Meaning)</h3>
+      <p>
+        Visual-only tags fail to convey importance to screen readers, disrupting evaluation.
+        <cite>(Ref: Dix et al., Ch. 1 "The Human", p. 15-18)</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> Using bold and italic tags strictly for style.</p>
+        <i>Note:</i> <b>Do not click twice.</b>
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using emphasis and strong tags for semantic weight.</p>
+        <em>Note:</em> <strong>Do not click twice.</strong>
+      </div>
+    </section>
+
+    <section class="rule-box">
+      <h3>7. Page Titles (Goal Formulation)</h3>
+      <p>
+        A clear title helps users verify they are in the right system state, aiding in goal formulation.
+        <cite>(Ref: Dix et al., Ch. 3 "The Interaction", p. 128)</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> Leaving the document untitled or generic.</p>
+        &lt;title&gt;Document&lt;/title&gt;
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Descriptive titles outlining the page's purpose.</p>
+        &lt;title&gt;Lab 01 - Semantic HTML & HCI Models&lt;/title&gt;
+      </div>
+    </section>
+
+    <section>
+      <h3>8. Table Structure (System State Perception)</h3>
+      <p>
+        Proper table headers allow assistive technologies to map data logically.
+        <cite>(Ref: Dix et al., Ch. 12 "Cognitive Models", p. 423)</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> Using standard rows for headers.</p>
+        &lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;/tr&gt;
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using the <code>&lt;th&gt;</code> element within a <code>&lt;thead&gt;</code>.</p>
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      </div>
+    </section>
+
+    <section class="rule-box">
+      <h3>9. Main Content Area (KLM Selection Rules)</h3>
+      <p>
+        Wrapping core content in a main tag reduces navigation time for screen readers, optimizing selection.
+        <cite>(Ref: Dix et al., Ch. 12 "Cognitive Models", p. 428-430)</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> A generic wrapper for the primary content.</p>
+        &lt;div id="content"&gt;...&lt;/div&gt;
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using the semantic main tag.</p>
+        &lt;main&gt;...&lt;/main&gt;
+      </div>
+    </section>
+
+    <section>
+      <h3>10. Quotations (Attribution Context)</h3>
+      <p>
+        Using blockquotes preserves context and meaning, mapping directly to the user's mental model.
+        <cite>(Ref: Dix et al., Ch. 7 "Design Rules", p. 260)</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> Using paragraph tags with quotation marks.</p>
+        &lt;p&gt;"Design is how it works." - Steve Jobs&lt;/p&gt;
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using blockquote and cite tags.</p>
+        &lt;blockquote&gt;
+          &lt;p&gt;Design is how it works.&lt;/p&gt;
+          &lt;cite&gt;- Steve Jobs&lt;/cite&gt;
+        &lt;/blockquote&gt;
       </div>
     </section>
 
