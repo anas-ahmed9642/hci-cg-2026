@@ -230,4 +230,67 @@
         &lt;title&gt;Document&lt;/title&gt;
       </div>
       <div>
-        <p><strong>CORRECT:</strong> Descriptive titles
+        <p><strong>CORRECT:</strong> Descriptive titles outlining the page's purpose.</p>
+        &lt;title&gt;Lab 01 - Semantic HTML&lt;/title&gt;
+      </div>
+    </section>
+
+    <section>
+      <h3>8. Table Structure (GOMS System State)</h3>
+      <p>
+        Proper headers allow the user's mental model to map directly to the system state, satisfying GOMS structural mapping.
+        <cite>(Ref: Dix et al., Ch. 12 "Cognitive models")</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> Using standard rows for headers.</p>
+        &lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;/tr&gt;
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using the <code>&lt;th&gt;</code> element within a <code>&lt;thead&gt;</code>.</p>
+        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+      </div>
+    </section>
+
+    <section class="rule-box">
+      <h3>9. Main Content Area (KLM Selection Rules)</h3>
+      <p>
+        Wrapping core content in a main tag reduces navigation time for screen readers, directly optimizing KLM selection rules.
+        <cite>(Ref: Dix et al., Ch. 12 "Cognitive models")</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> A generic wrapper for the primary content.</p>
+        &lt;div id="content"&gt;...&lt;/div&gt;
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using the semantic main tag.</p>
+        &lt;main&gt;...&lt;/main&gt;
+      </div>
+    </section>
+
+    <section>
+      <h3>10. Quotations (Consistency Standards)</h3>
+      <p>
+        Using standard HTML blockquotes adheres to the heuristic evaluation principles of consistency and standards.
+        <cite>(Ref: Dix et al., Ch. 9 "Evaluation techniques")</cite>
+      </p>
+      <div class="warning">
+        <p><strong>WRONG:</strong> Using paragraph tags with quotation marks.</p>
+        &lt;p&gt;"Design is how it works." - Steve Jobs&lt;/p&gt;
+      </div>
+      <div>
+        <p><strong>CORRECT:</strong> Using blockquote and cite tags.</p>
+        &lt;blockquote&gt;
+          &lt;p&gt;Design is how it works.&lt;/p&gt;
+          &lt;cite&gt;- Steve Jobs&lt;/cite&gt;
+        &lt;/blockquote&gt;
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><a href="index.html" style="color: white;">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
