@@ -5,49 +5,65 @@
   <title>Lab Assignment 01 – Semantic HTML Foundations</title>
 
   <style>
-    /* Minimal styling allowed in Lab 01 (color + font only) */
+    /* STRICTLY LIMITED TO ALLOWED PROPERTIES: color, background-color, font-family, font-size */
 
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 16px;
-      background-color: #f4f6f9;
-      color: #1f2933;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 18px; 
+      background-color: #fafafa;
+      color: #333333;
     }
 
     header {
-      background-color: #1e3a8a;
-      color: white;
+      background-color: #0f172a; 
+      color: #f8fafc;
     }
 
-    h1, h2, h3 {
+    h1 {
       font-family: Georgia, "Times New Roman", serif;
+      font-size: 36px;
+      color: #f8fafc;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      color: #0f172a;
+    }
+
+    h3 {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      font-size: 22px;
+      color: #1e293b;
     }
 
     nav {
-      background-color: #e0e7ff;
-    }
-
-    .rule-box {
-      background-color: #fff4e6;
-    }
-
-    .note-box {
-      background-color: #e6f4ff;
-    }
-
-    .warning {
-      color: #b91c1c;
-      font-size: 15px;
-    }
-
-    footer {
-      background-color: #1e3a8a;
-      color: white;
-      font-size: 14px;
+      background-color: #e2e8f0;
+      font-size: 18px;
     }
 
     a {
-      color: #1e3a8a;
+      color: #2563eb; 
+    }
+
+    .rule-box {
+      background-color: #f1f5f9; 
+    }
+
+    .note-box {
+      background-color: #dbeafe; 
+    }
+
+    .warning {
+      background-color: #fef2f2; 
+      color: #991b1b;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -58,7 +74,7 @@
     <h1>Lab Practice &amp; Assignment 01</h1>
     <p>
       Semantic HTML foundations using Norman, GOMS, and KLM
-      (<strong>Dix et al., Human–Computer Interaction</strong>, Ch. 12)
+      (<strong>Dix et al., Human–Computer Interaction</strong>, Ch. 9 &amp; 12)
     </p>
   </header>
 
@@ -95,15 +111,15 @@
       <h2>Semantic Comparison: Wrong vs. Correct</h2>
       <p>
         In HCI, semantic HTML reduces the <strong>Bridge of Execution</strong>. When the browser understands the structure, 
-        the user can more easily form an action plan (Norman's Model).
+        the user can more easily form an action plan based on standard Cognitive Models.
       </p>
     </section>
 
     <section class="rule-box">
-      <h3>1. Document Structure (Norman's Evaluation)</h3>
+      <h3>1. Document Structure (Cognitive Walkthrough)</h3>
       <p>
-        Proper structure allows users and screen readers to perceive the information hierarchy accurately.
-        <cite>(Ref: Dix et al., Ch. 10 "Universal Design", p. 374)</cite>
+        Proper structure ensures the user's next action is visible and perceivable, a core question in a Cognitive Walkthrough.
+        <cite>(Ref: Dix et al., Ch. 9 "Evaluation techniques")</cite>
       </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Using visual styling to fake a heading.</p>
@@ -118,7 +134,7 @@
     <section>
       <h3>2. Form Controls (KLM Mental Preparation)</h3>
       <p>Using labels reduces the <strong>M (Mental)</strong> operator time for the user by clearly defining input targets.
-         <cite>(Ref: Dix et al., Ch. 12 "Cognitive Models", p. 428)</cite>
+         <cite>(Ref: Dix et al., Ch. 12 "Cognitive models")</cite>
       </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Placeholder only / No label.</p>
@@ -132,10 +148,10 @@
     </section>
 
     <section class="rule-box">
-      <h3>3. Site Navigation</h3>
+      <h3>3. Site Navigation (GOMS Methods)</h3>
       <p>
-        Semantic navigation blocks help users conceptualize the site structure, aiding in wayfinding.
-        <cite>(Ref: Dix et al., Ch. 7 "Design Rules", p. 275)</cite>
+        Semantic navigation blocks help users execute standard Methods in the GOMS model for moving between pages.
+        <cite>(Ref: Dix et al., Ch. 12 "Cognitive models")</cite>
       </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Using generic containers.</p>
@@ -156,10 +172,10 @@
     </section>
 
     <section>
-      <h3>4. Accessibility (Norman's Perception)</h3>
+      <h3>4. Accessibility (Heuristic Evaluation)</h3>
       <p>
-        Missing alternative text breaks the perception phase for visually impaired users.
-        <cite>(Ref: Dix et al., Ch. 10 "Universal Design", p. 376)</cite>
+        Missing alternative text violates heuristic evaluation standards for system visibility and universal access.
+        <cite>(Ref: Dix et al., Ch. 9 "Evaluation techniques")</cite>
       </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Missing Alternative Text.</p>
@@ -172,10 +188,10 @@
     </section>
 
     <section class="rule-box">
-      <h3>5. Clickable Elements (Affordances)</h3>
+      <h3>5. Clickable Elements (KLM Pointing Operator)</h3>
       <p>
-        Using proper interactive elements provides clear affordances, reducing cognitive load. 
-        <cite>(Ref: Dix et al., Ch. 3 "The Interaction", p. 126-128)</cite>
+        Clear, semantic interactive elements optimize the <strong>P (Pointing)</strong> operator in Keystroke-Level Modeling.
+        <cite>(Ref: Dix et al., Ch. 12 "Cognitive models")</cite>
       </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Using a div with an onClick event.</p>
@@ -188,10 +204,10 @@
     </section>
 
     <section>
-      <h3>6. Emphasis and Importance (Semantic Meaning)</h3>
+      <h3>6. Emphasis (Visibility of System Status)</h3>
       <p>
-        Visual-only tags fail to convey importance to screen readers, disrupting evaluation.
-        <cite>(Ref: Dix et al., Ch. 1 "The Human", p. 15-18)</cite>
+        Using proper semantic emphasis ensures the system status is perceivable to screen readers during expert evaluation.
+        <cite>(Ref: Dix et al., Ch. 9 "Evaluation techniques")</cite>
       </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Using bold and italic tags strictly for style.</p>
@@ -204,77 +220,14 @@
     </section>
 
     <section class="rule-box">
-      <h3>7. Page Titles (Goal Formulation)</h3>
+      <h3>7. Page Titles (Evaluation Context)</h3>
       <p>
-        A clear title helps users verify they are in the right system state, aiding in goal formulation.
-        <cite>(Ref: Dix et al., Ch. 3 "The Interaction", p. 128)</cite>
+        A clear title helps evaluators verify the user will recognize they have achieved their goal (Cognitive Walkthrough step 4).
+        <cite>(Ref: Dix et al., Ch. 9 "Evaluation techniques")</cite>
       </p>
       <div class="warning">
         <p><strong>WRONG:</strong> Leaving the document untitled or generic.</p>
         &lt;title&gt;Document&lt;/title&gt;
       </div>
       <div>
-        <p><strong>CORRECT:</strong> Descriptive titles outlining the page's purpose.</p>
-        &lt;title&gt;Lab 01 - Semantic HTML & HCI Models&lt;/title&gt;
-      </div>
-    </section>
-
-    <section>
-      <h3>8. Table Structure (System State Perception)</h3>
-      <p>
-        Proper table headers allow assistive technologies to map data logically.
-        <cite>(Ref: Dix et al., Ch. 12 "Cognitive Models", p. 423)</cite>
-      </p>
-      <div class="warning">
-        <p><strong>WRONG:</strong> Using standard rows for headers.</p>
-        &lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;/tr&gt;
-      </div>
-      <div>
-        <p><strong>CORRECT:</strong> Using the <code>&lt;th&gt;</code> element within a <code>&lt;thead&gt;</code>.</p>
-        &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
-      </div>
-    </section>
-
-    <section class="rule-box">
-      <h3>9. Main Content Area (KLM Selection Rules)</h3>
-      <p>
-        Wrapping core content in a main tag reduces navigation time for screen readers, optimizing selection.
-        <cite>(Ref: Dix et al., Ch. 12 "Cognitive Models", p. 428-430)</cite>
-      </p>
-      <div class="warning">
-        <p><strong>WRONG:</strong> A generic wrapper for the primary content.</p>
-        &lt;div id="content"&gt;...&lt;/div&gt;
-      </div>
-      <div>
-        <p><strong>CORRECT:</strong> Using the semantic main tag.</p>
-        &lt;main&gt;...&lt;/main&gt;
-      </div>
-    </section>
-
-    <section>
-      <h3>10. Quotations (Attribution Context)</h3>
-      <p>
-        Using blockquotes preserves context and meaning, mapping directly to the user's mental model.
-        <cite>(Ref: Dix et al., Ch. 7 "Design Rules", p. 260)</cite>
-      </p>
-      <div class="warning">
-        <p><strong>WRONG:</strong> Using paragraph tags with quotation marks.</p>
-        &lt;p&gt;"Design is how it works." - Steve Jobs&lt;/p&gt;
-      </div>
-      <div>
-        <p><strong>CORRECT:</strong> Using blockquote and cite tags.</p>
-        &lt;blockquote&gt;
-          &lt;p&gt;Design is how it works.&lt;/p&gt;
-          &lt;cite&gt;- Steve Jobs&lt;/cite&gt;
-        &lt;/blockquote&gt;
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <p><a href="index.html" style="color: white;">Back to Home</a></p>
-  </footer>
-
-</body>
-</html>
+        <p><strong>CORRECT:</strong> Descriptive titles
