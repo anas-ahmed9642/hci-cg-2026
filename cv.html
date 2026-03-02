@@ -1,64 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Character encoding for consistent text rendering -->
   <meta charset="UTF-8">
+  <title>My Curriculum Vitae</title>
 
-  <!-- Page title shown in browser tab and announced by screen readers -->
-  <title>Don Norman – CV</title>
+  <style>
+    /* STRICTLY LIMITED TO ALLOWED PROPERTIES: color, background-color, font-family, font-size */
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 18px; 
+      background-color: #fafafa;
+      color: #333333;
+    }
+
+    header {
+      background-color: #0f172a; 
+      color: #f8fafc;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 36px;
+      color: #f8fafc;
+    }
+
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      color: #0f172a;
+    }
+
+    h3 {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      font-size: 22px;
+      color: #1e293b;
+    }
+
+    nav {
+      background-color: #e2e8f0;
+      font-size: 18px;
+    }
+
+    a {
+      color: #2563eb; 
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Page header: identifies the page -->
   <header>
     <h1>Curriculum Vitae</h1>
   </header>
 
-  <!-- Primary navigation: consistent across all pages -->
   <nav aria-label="Primary navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-
-      <!-- Current page is indicated using aria-current -->
       <li><a href="cv.html" aria-current="page">CV</a></li>
-
       <li><a href="contact.html">Contact</a></li>
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
-
     </ul>
   </nav>
 
-  <!-- Main landmark: unique content of this page -->
   <main>
-
     <section>
       <h2>Education</h2>
       <ul>
-        <li>PhD in Psychology – University of Pennsylvania</li>
-        <li>BSc in Engineering – MIT</li>
+        <li>BS Computer Science (5th Semester) – UBIT, University of Karachi (UoK)</li>
+        <li>BE Electrical Engineering (Uncontinued) – NED University</li>
+        <li>HSC (Science) – Adamjee Govt. Science College</li>
       </ul>
     </section>
 
     <section>
-      <h2>Work Experience</h2>
-
-      <!-- Each role is grouped as a separate content unit -->
+      <h2>Work Experience & Projects</h2>
       <article>
-        <h3>Professor of Cognitive Science</h3>
-        <p>University of California, San Diego</p>
+        <h3>Flutter App Development</h3>
+        <p>Independent Learning & Development</p>
       </article>
 
       <article>
-        <h3>Director, Design Lab</h3>
-        <p>Founder of the Nielsen Norman Group</p>
+        <h3>HCI & Semantic HTML Lab Work</h3>
+        <p>Frontend Development Practice</p>
       </article>
     </section>
-
   </main>
 
-  <!-- Footer contains supplementary navigation and meta information -->
   <footer>
     <p><a href="index.html">Back to Home</a></p>
   </footer>
